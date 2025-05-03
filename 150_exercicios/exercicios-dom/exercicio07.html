@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fatorial</title>
+    <!-- Crie uma página que calcule o fatorial de um número inserido pelo usuário. -->
+  </head>
+  <body>
+    <h1>Fatorial de um numero</h1>
+    <div>
+      <label for="numero">Digite um numero</label>
+      <input type="number" id="numero" placeholder="Digite aqui..." />
+      <button onclick="verificar()">Verificar</button>
+      <p id="resposta"></p>
+    </div>
+
+    <script>
+      function verificar() {
+        const numero = parseInt(document.getElementById('numero').value);
+        const resposta = document.getElementById('resposta');
+        let resultado = 1;
+        for (i = 1; i <= numero; i++) {
+          resultado *= i;
+        }
+
+        document.getElementById(
+          'resposta'
+        ).innerHTML = `Fatorial de ${numero} é ${resultado}`;
+      }
+    </script>
+  </body>
+</html>
